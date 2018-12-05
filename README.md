@@ -1,7 +1,7 @@
 # facebook-events-ics
-Groups facebook events in separate files depending on the selected paritipation (going, interested, unanswered)
+Add your facebook events to your calendar, grouped by the paritipation you selected (going, interested, unanswered)
 
-We are not fans of facebook, but still it is used to publish many events.
+We are not fans of facebook either, but it is still used to publish many events.
 This projects lets you download the event list, group them by what you answered about participating in them.
 The resulting ics files can be added as separate calenders to your favorite calendar application (as KDE's KOrganizer for example).
 

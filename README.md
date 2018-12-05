@@ -23,3 +23,7 @@ The resulting ics files can be added as separate calenders to your favorite cale
 3. Add it to your cron to run regularly (every 15 min. for example). This will keep your events calendar up to date.
 
 4. Add the calendars created by the script to your calendar. You will find them in the ~/.config/facebook-events folder.
+
+
+# Possible TODO:
+For KDE users to make the setup easier, it would be possible to provide this functionality as an Akonadi resource. (Akonadi has a facebook events resource already but it doesn't work)

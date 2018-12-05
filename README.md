@@ -2,7 +2,7 @@
 
 We are not fans of facebook either, but it is still used to publish many events.
 This projects lets you download the event list, group them by what you answered about participating in them.
-The resulting ics files can be added as separate calenders to your favorite calendar application (as KDE's KOrganizer for example).
+The resulting ics files can be added as separate calendars to your favorite calendar application (as KDE's KOrganizer for example).
 
 # Requirements:
 - cron or other system which executes a command regularly

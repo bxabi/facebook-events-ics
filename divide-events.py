@@ -7,8 +7,9 @@ CONFIG_PATH = expanduser("~") + "/.config/facebook-events/"
 
 # read in the events downloaded from facebook
 with open(CONFIG_PATH + "facebook-events.ics", 'r', newline="\r\n") as my_file:
-    lines = my_file.readlines()
-    mergedCalendar = Calendar(lines)
+    fileContent = my_file.read()
+    #fileContent = fileContent.replace("\\n", "")
+    mergedCalendar = Calendar(fileContent)
 
 calendars = {"ACCEPTED": Calendar(), "NEEDS-ACTION": Calendar(), "TENTATIVE": Calendar(), "TENTATIVE-PAST": Calendar()}
 
@@ -21,7 +22,7 @@ for event in mergedCalendar.events:
             goingType = line.value
             break
 
-    event.description = event.description.replace('\r\n', '')
+    #event.description = event.description.replace('\r\n', '')
 
     if goingType == "NEEDS-ACTION":
         if event.end.datetime > now:

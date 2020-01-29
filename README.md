@@ -16,13 +16,17 @@ The resulting ics files can be added as separate calendars to your favorite cale
 - open https://www.facebook.com/events/hosting/ in the browser
 - right click to "Upcoming Events", and copy the link location.
 
-2. Dowload the update-events.sh and the divide-events.py files from this git repository.
+2. Clone this repository
 
-2. Insert your event list url (link) in the update-facebook-events.sh
+3. Run 
+`pip install -r requirements.txt` for global install
+or `pip install --user -r requirements.txt` to install just for your user
 
-3. Add it to your cron to run regularly (every 15 min. for example). This will keep your events calendar up to date.
+4. Insert your event list url (link) in the update-facebook-events.sh
 
-4. Add the calendars created by the script to your calendar. You will find them in the ~/.config/facebook-events folder.
+5. Add it to your cron to run regularly (every 15 min. for example). This will keep your events calendar up to date.
+
+6. Add the calendars created by the script to your calendar. You will find them in the ~/.config/facebook-events folder.
 
 
 # Possible TODO:

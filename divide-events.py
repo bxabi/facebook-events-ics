@@ -17,7 +17,7 @@ now = pytz.utc.localize(datetime.datetime.utcnow())
 
 # group the events in different calendars based on the action taken
 for event in mergedCalendar.events:
-    for line in event._unused:
+    for line in event.extra:
         if line.name == "PARTSTAT":
             goingType = line.value
             break

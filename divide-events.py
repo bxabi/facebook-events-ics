@@ -2,13 +2,15 @@ from ics import Calendar
 import datetime
 import pytz
 from os.path import expanduser
+import re
 
 CONFIG_PATH = expanduser("~") + "/.config/facebook-events/"
 
 # read in the events downloaded from facebook
 with open(CONFIG_PATH + "facebook-events.ics", 'r', newline="\r\n") as my_file:
     fileContent = my_file.read()
-    #fileContent = fileContent.replace("\\n", "")
+    # put the Organizer CN in quotes - because if it contains \, the parser fails.
+    fileContent = re.sub("ORGANIZER;CN=(.*):MAILTO:", 'ORGANIZER;CN="\\1":MAILTO:', fileContent)
     mergedCalendar = Calendar(fileContent)
 
 calendars = {"ACCEPTED": Calendar(), "NEEDS-ACTION": Calendar(), "TENTATIVE": Calendar(), "TENTATIVE-PAST": Calendar()}
